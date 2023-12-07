@@ -1,0 +1,171 @@
+body {
+    background: linear-gradient(rgb(89, 0, 255), rgb(0, 4, 59));
+    font-family: 'Montserrat', sans-serif;
+    width: 99vw;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    backdrop-filter: blur(2px);
+    background: rgba(253, 253, 253, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    margin-right: 40px;
+    text-decoration: none;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    
+}
+
+.image {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 7vh;
+    display: inline-block;
+    width: 913px;
+    height: 760px;
+}
+
+.tooltip {
+    position: absolute;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    min-width: 150px;
+    max-width: 500px;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    opacity: 0%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+.accordion {
+    width: 400px;
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.accordion .contentBx .label {
+    position: relative;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+.accordion .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    
+}
+
+.accordion .contentBx .content {
+    position: relative;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.accordion .contentBx.active .content {
+    height: 200px;
+    padding: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.accordion .contentBx.active .label {
+    position: relative;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.315);
+    border-radius: 5px;
+}
