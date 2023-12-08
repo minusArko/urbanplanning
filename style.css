@@ -144,6 +144,12 @@ body {
     border-radius: 5px;
 }
 
+.accordion .contentBx .content img {
+    max-width: 100%;
+    width: 100%;
+    height: auto; 
+}
+
 .accordion .contentBx.active .content {
     height: 200px;
     padding: 10px;
@@ -163,11 +169,6 @@ body {
     border-bottom-right-radius: 0;
 }
 
-.accordion .contentBx .content img {
-    max-width: 100%;
-    width: 100%; 
-    height: auto; 
-}
 ::-webkit-scrollbar{
     width: 10px;
     height: 10px;
