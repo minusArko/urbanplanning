@@ -177,3 +177,23 @@ body {
     background: rgba(0, 0, 0, 0.315);
     border-radius: 5px;
 }
+
+.bibcontainer {
+    display: flex;
+    flex-direction: column;
+}
+.bib {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40vw;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.paragraph {
+    text-indent: 5em;
+}
